@@ -1,8 +1,8 @@
 galaxy_info:
-  author: chanchalbose
-  description: Automate Wordpress deployment in CentOS, Redhat or Ubuntu
-  company: "prodevans.com"
-  license: "MIT"
+  author: emirsway
+  description: Automate Wordpress deployment in Ubuntu
+  company: N/A
+  license: "Check License.md"
 
   min_ansible_version: 2.0
   platforms:

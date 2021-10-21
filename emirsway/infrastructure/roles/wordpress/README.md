@@ -1,7 +1,7 @@
-chanchal/wordpress
+emirsway/wordpress
 =========
 
-Create wordpress site. You can try it on CentOS7, Redhat7, Ubuntu or Debian
+Create wordpress site. You can try it on Ubuntu only.
 
 
 Role Variables
@@ -30,9 +30,20 @@ Including an example of how to use your role (for instance, with variables passe
 
 License
 -------
+Check License.md
 
-BSD
 
-Author Information
-------------------
-Maintainer: Chanchal Bose chanchal@mostlylinux.com
+More about my work check below
+-------
+https://github.com/emirsway
+https://galaxy.ansible.com/emirsway
+
+
+Contact
+-------
+emirmails@gmail.com
+
+
+License
+-------
+Check License.md

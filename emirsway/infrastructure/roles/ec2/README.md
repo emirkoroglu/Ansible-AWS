@@ -1,38 +1,44 @@
 Role Name
 =========
+- Create a 5 EC2 instance by ec2.yaml playbook which will run the role for you. If you want to edit the details check the /roles.
+Instance details;
+      key_name: laptop
+      instance_type: t2.micro
+      image: ami-074cce78125f09d61
+      wait: yes
+      count: 5
+      region: us-east-2
 
-A brief description of the role goes here.
+- Install a Wordpress and dependencies by running wordpress.yaml on a Ubuntu.
+
+- Create a IAM user and DevOps group by running user_group.yaml
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Support Ansible 1.2 and above.
+
+Ubuntu for Wordpress.
+
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Wordpress;
+In roles/wordpress/defaults/main.yml , you have to put your database name and mysql account and password for wordpress.
 
-Dependencies
-------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+More about my work check below
+-------
+https://github.com/emirsway
+https://galaxy.ansible.com/emirsway
 
-Example Playbook
-----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Contact
+-------
+emirmails@gmail.com
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
 
 License
 -------
-
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Check License.md

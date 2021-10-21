@@ -1,4 +1,4 @@
-# ansible-playbook IAAC/ec2.yaml 
+# ansible-playbook infrastructure/ec2.yaml 
 ---
   - amazon.aws.ec2:
       key_name: laptop
