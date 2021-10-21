@@ -1,6 +1,6 @@
-# ansible-playbook IAAC/iam.yaml 
+# ansible-playbook  
 ---
-  - name: Create Users
+  - name: Creating User ----- Please wait
     community.aws.iam:
       iam_type: user
       name: "{{ item }}"
@@ -9,4 +9,14 @@
       access_key_state: create
     loop:
       - DevOps_Student1
-      - DevOps_Student2
+    
+      
+
+  - name: Creating a DevOps group --- Please wait
+    community.aws.iam:
+      iam_type: group
+      name: "{{ item }}"
+      state: present
+    loop:
+     - DevOps
+    register: DevOps

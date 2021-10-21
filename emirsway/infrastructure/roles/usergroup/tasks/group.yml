@@ -1,7 +1,9 @@
- ---
- - name: Ensure group "DevOps" exists
-    ansible.builtin.group:
-      name: "{{ item }}"
-      state: present
-    with_items:
-    - DevOps
+---
+  - name: Create a DevOps group
+    community.aws.iam:
+     iam_type: group
+     name: "{{ item }}"
+     state: present
+    loop:
+     - DevOps
+  register: new_groups
