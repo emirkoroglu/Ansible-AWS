@@ -1,0 +1,12 @@
+# ansible-playbook IAAC/iam.yaml 
+---
+  - name: Create Users
+    community.aws.iam:
+      iam_type: user
+      name: "{{ item }}"
+      state: present
+      password: "evolvecyberevolvecyberevolvecyberevolvecyberevolvecyber1!"
+      access_key_state: create
+    loop:
+      - DevOps_Student1
+      - DevOps_Student2

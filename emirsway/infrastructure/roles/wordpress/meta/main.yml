@@ -1,0 +1,32 @@
+galaxy_info:
+  author: chanchalbose
+  description: Automate Wordpress deployment in CentOS, Redhat or Ubuntu
+  company: "prodevans.com"
+  license: "MIT"
+
+  min_ansible_version: 2.0
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Fedora
+    versions:
+     - all
+  - name: EL
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  #   - 1.0
+  #   - 7
+  #   - 99.99
+
+  categories:
+  - development
+  - web
+  galaxy_tags: 
+  - wordpress
+  - cms
+
+

@@ -1,0 +1,17 @@
+---
+#- name: Wordpresss | Create wordpress installation directory exists
+#  file: path={{wp_install_dir}} state=directory
+
+- name: Wordpresss | Download {{wp_version}} to /tmp
+  get_url: url=http://wordpress.org/wordpress-{{wp_version}}.tar.gz force=no dest=/tmp/wordpress-{{wp_version}}.tar.gz
+
+- name: Wordpresss | Extract archive
+  unarchive: src=/tmp/wordpress-{{wp_version}}.tar.gz dest=/tmp copy=no
+
+- name: Wordpresss | Move extracted directory to {{wp_install_dir}}
+  command: /bin/mv /tmp/wordpress {{wp_install_dir}} creates={{wp_install_dir}}
+  register: wp
+- debug: var=wp
+
+#- name: Wordpresss | Remove wordpress-{{wp_version}}.tar.gz
+#  file: path=/tmp/wordpress-{{wp_version}}.tar.gz state=absent

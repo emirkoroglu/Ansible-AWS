@@ -1,0 +1,18 @@
+---
+# tasks file for Ubuntu and Debian
+- name: Intall required packages
+  apt: name={{ item }} state=present
+  with_items:
+    - apache2
+    - mysql-server
+    - mysql
+    - php
+    - php-mysql
+    - python-mysql
+- name: Ubuntu and Debian start apache service
+  service: name=apache2 state=started
+- name: Create database
+  include: mysqldb.yml
+- name: Download and extract wordpress
+  include: wpdownload.yml
+
